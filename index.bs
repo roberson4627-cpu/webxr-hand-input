@@ -256,6 +256,8 @@ The {{XRHandJoint}} enum defines the various joints that each {{XRHand}} MUST co
 
 Every {{XRHand}} has an associated <dfn for=XRHand>input source</dfn>, which is the [=physical hand input source=] that it tracks.
 
+NOTE: The <code>handedness</code> property of {{XRInputSource}} describes which hand the XR input source is associated with, if any.
+
 <div algorithm="XRHand.[[joints]]">
     Each {{XRHand}} object has a <dfn attribute for="XRHand">\[[joints]]</dfn> internal slot,
     which is an [=ordered map=] of pairs with the key of type {{XRHandJoint}} and the value of type {{XRJointSpace}}.

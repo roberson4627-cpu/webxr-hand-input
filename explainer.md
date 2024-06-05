@@ -12,6 +12,8 @@ This API will only be accessible if a `"hand-tracking"` [XR feature](https://imm
 
 This API presents itself as an additional field on `XRInputSource`, `hand`. The `hand` attribute will be non-null if the input source supports hand tracking and the feature has been requested.
 
+You can determine which hand the input source is associated with by accessing the `handedness` property of `XRInputSource`.
+
 ```js
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(...);
 
