@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/TR/webxr-hand-input-1/" rel="canonical">
-  <meta content="940a91869d6a52582347fdf3ec4719925ce3e3a6" name="document-revision">
+  <meta content="ae350052ea2143b05afa14efda1e11739ac46774" name="document-revision">
   <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
   <link href="favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 <style>
@@ -944,7 +944,7 @@ var.selected6 { background-color: #FFBCF2; box-shadow: 0 0 0 2px #FFBCF2; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">WebXR Hand Input Module - Level 1</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-02-07">7 February 2024</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-06-05">5 June 2024</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -1231,6 +1231,7 @@ by this module as a new valid <a data-link-type="dfn">feature descriptor</a> for
 </pre>
    <p>The <code class="idl"><a data-link-type="idl" href="#enumdef-xrhandjoint" id="ref-for-enumdef-xrhandjoint③">XRHandJoint</a></code> enum defines the various joints that each <code class="idl"><a data-link-type="idl" href="#xrhand" id="ref-for-xrhand②">XRHand</a></code> MUST contain.</p>
    <p>Every <code class="idl"><a data-link-type="idl" href="#xrhand" id="ref-for-xrhand③">XRHand</a></code> has an associated <dfn class="dfn-paneled" data-dfn-for="XRHand" data-dfn-type="dfn" data-noexport id="xrhand-input-source">input source</dfn>, which is the <a data-link-type="dfn" href="#physical-hand-input-source" id="ref-for-physical-hand-input-source⑥">physical hand input source</a> that it tracks.</p>
+   <p class="note" role="note"><span class="marker">NOTE:</span> The <code>handedness</code> property of <code class="idl"><a data-link-type="idl" href="https://immersive-web.github.io/webxr/#xrinputsource" id="ref-for-xrinputsource④">XRInputSource</a></code> describes which hand the XR input source is associated with, if any.</p>
    <div class="algorithm" data-algorithm="XRHand.[[joints]]">
      Each <code class="idl"><a data-link-type="idl" href="#xrhand" id="ref-for-xrhand④">XRHand</a></code> object has a <dfn class="dfn-paneled idl-code" data-dfn-for="XRHand" data-dfn-type="attribute" data-export id="dom-xrhand-joints-slot"><code>[[joints]]</code></dfn> internal slot,
     which is an <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map" id="ref-for-ordered-map">ordered map</a> of pairs with the key of type <code class="idl"><a data-link-type="idl" href="#enumdef-xrhandjoint" id="ref-for-enumdef-xrhandjoint④">XRHandJoint</a></code> and the value of type <code class="idl"><a data-link-type="idl" href="#xrjointspace" id="ref-for-xrjointspace②">XRJointSpace</a></code>. 
@@ -2166,7 +2167,7 @@ window.dfnpanelData['42a03705'] = {"dfnID": "42a03705", "url": "https://webidl.s
 window.dfnpanelData['79693d31'] = {"dfnID": "79693d31", "url": "https://immersive-web.github.io/webxr/#dom-xrsessionmode-immersive-vr", "dfnText": "\"immersive-vr\"", "refSections": [{"refs": [{"id": "ref-for-dom-xrsessionmode-immersive-vr"}], "title": "5. Privacy & Security Considerations"}], "external": true};
 window.dfnpanelData['f8e8ab73'] = {"dfnID": "f8e8ab73", "url": "https://immersive-web.github.io/webxr/#dom-xrsessionmode-inline", "dfnText": "\"inline\"", "refSections": [{"refs": [{"id": "ref-for-dom-xrsessionmode-inline"}], "title": "5. Privacy & Security Considerations"}], "external": true};
 window.dfnpanelData['7a030114'] = {"dfnID": "7a030114", "url": "https://immersive-web.github.io/webxr/#xrframe", "dfnText": "XRFrame", "refSections": [{"refs": [{"id": "ref-for-xrframe"}, {"id": "ref-for-xrframe\u2460"}, {"id": "ref-for-xrframe\u2461"}, {"id": "ref-for-xrframe\u2462"}], "title": "4.1. XRFrame"}], "external": true};
-window.dfnpanelData['ea90e02f'] = {"dfnID": "ea90e02f", "url": "https://immersive-web.github.io/webxr/#xrinputsource", "dfnText": "XRInputSource", "refSections": [{"refs": [{"id": "ref-for-xrinputsource"}], "title": "2. Initialization"}, {"refs": [{"id": "ref-for-xrinputsource\u2460"}], "title": "3. Physical Hand Input Sources"}, {"refs": [{"id": "ref-for-xrinputsource\u2461"}, {"id": "ref-for-xrinputsource\u2462"}], "title": "3.1. XRInputSource"}], "external": true};
+window.dfnpanelData['ea90e02f'] = {"dfnID": "ea90e02f", "url": "https://immersive-web.github.io/webxr/#xrinputsource", "dfnText": "XRInputSource", "refSections": [{"refs": [{"id": "ref-for-xrinputsource"}], "title": "2. Initialization"}, {"refs": [{"id": "ref-for-xrinputsource\u2460"}], "title": "3. Physical Hand Input Sources"}, {"refs": [{"id": "ref-for-xrinputsource\u2461"}, {"id": "ref-for-xrinputsource\u2462"}], "title": "3.1. XRInputSource"}, {"refs": [{"id": "ref-for-xrinputsource\u2463"}], "title": "3.3. XRHand"}], "external": true};
 window.dfnpanelData['9dfd38d6'] = {"dfnID": "9dfd38d6", "url": "https://immersive-web.github.io/webxr/#xrpose", "dfnText": "XRPose", "refSections": [{"refs": [{"id": "ref-for-xrpose"}], "title": "4.1. XRFrame"}, {"refs": [{"id": "ref-for-xrpose\u2460"}, {"id": "ref-for-xrpose\u2461"}], "title": "4.2. XRJointPose"}], "external": true};
 window.dfnpanelData['b23556e5'] = {"dfnID": "b23556e5", "url": "https://immersive-web.github.io/webxr/#xrsession", "dfnText": "XRSession", "refSections": [{"refs": [{"id": "ref-for-xrsession"}, {"id": "ref-for-xrsession\u2460"}], "title": "2. Initialization"}, {"refs": [{"id": "ref-for-xrsession\u2461"}], "title": "3.1. XRInputSource"}], "external": true};
 window.dfnpanelData['0b566548'] = {"dfnID": "0b566548", "url": "https://immersive-web.github.io/webxr/#xrspace", "dfnText": "XRSpace", "refSections": [{"refs": [{"id": "ref-for-xrspace"}], "title": "3.4. XRJointSpace"}, {"refs": [{"id": "ref-for-xrspace\u2460"}, {"id": "ref-for-xrspace\u2461"}, {"id": "ref-for-xrspace\u2462"}], "title": "4.1. XRFrame"}], "external": true};
